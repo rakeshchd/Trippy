@@ -1,0 +1,137 @@
+.navbar-items{
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 1);
+    width: 95%;
+    height: 80px;
+    border-radius: 2rem;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 99999;
+}
+
+.navbar-logo{
+    color: #222;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-menu{
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 5px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links{
+    text-decoration: none;
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.7rem;
+    padding-right: .9rem;
+    white-space: nowrap;
+}
+
+.nav-links i{
+    padding-right: 10px;
+}
+
+.nav-links:hover{
+    background-color: #0367c5;
+    color: #fff;
+    border-radius: 1.2rem;
+    transition: all 0.1s ease-in-out;
+}
+
+.nav-links-mobile{
+    text-align: center;
+    padding: .8rem 1rem;
+    margin: auto;
+    border-radius: 1rem;
+    background: #222;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.1s ease-in-out;
+}
+
+.nav-links-mobile:hover{
+    background: #0367c5;
+}
+
+.menu-icons{
+    display: none;
+}
+
+@media screen and (max-width: 850px){
+    .navbar-items{
+        z-index: 99999;
+    }
+
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: #fff;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        opacity: 0;
+        align-items: stretch;
+        padding: 80px 0 40px 0;
+        margin: 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+        box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 1);
+        border-radius: 2rem;
+        transition: all .15s ease-in-out;
+    }
+
+    .nav-links{
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        padding: 1.2rem 0;
+    }
+
+    .nav-links:hover{
+        background: #0367c5;
+        transition: none;
+    }
+
+    .menu-icons{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-icons i{
+        font-size: 2rem;
+        color: #222;
+    }
+
+    .nav-links-mobile{
+        padding: 1rem 5rem;
+        border-radius: 1.5rem;
+        background: #0367c5;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+}
